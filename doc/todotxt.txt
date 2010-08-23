@@ -1,3 +1,6 @@
+*todotxt* todo.txt file-type plugin and syntax file
+
+
 Some files to make editing todo.txt files in vim more enjoyable.
 
 To use IndentSort.vim copy to your .vim/plugins directory.

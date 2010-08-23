@@ -1,23 +1,20 @@
-Some files to make editing todo.txt files in vim more enjoyable.
+Some files to make editing todo.txt files in Vim more enjoyable.
 
-To use IndentSort.vim copy to your .vim/plugins directory.
+Install
+========
 
-In vim use spaces to indent your child tasks.  Then either highlight a range or
-use :%Indent. 
+If you have the `make` and `rsync` commands available, run:
 
-To use todo.vim copy the file to your .vim/syntax directory.
+    make deploy
 
-Also copy filetype.vim to you .vim/ftdetect directory.
+Otherwise, copy the directories to your .vim directory.
 
-You might also want to set the following in your .vimrc file:
+To access this help file from within Vim you must first update your help
+tags:
 
-set shiftwidth=4 
-set expandtab
-set foldlevel=0
-set foldminlines=3
+    :helptags ~/.vim/doc
 
-if has("autocmd")
-    filetype plugin on
-    autocmd FileType todo set syntax=todo foldmethod=indent
-endif
+The path may need to be modified depending on where you install to. Once
+you have done this you can access the help with this command:
 
+    :help todotxt
