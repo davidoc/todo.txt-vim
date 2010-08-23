@@ -1,0 +1,64 @@
+!A +todovim +keys
+	learn [d make done
+	learn [j add tag, add date, make done
+	learn [r recursive indent sort
+	learn [s indent sort
+	learn [t add tag from parent (some bugs)
+	learn abbreviations e.g. 2days -> (08/25) 
+!B high priority tasks
+# Comment
+(01/01) +a title
+	!A +b title
+		+3 title
+		+c title
+			+d title
+				@email foo@bar.com http://foo.com 
+				put cursor on this line and run script _underlined_ text
+				R:bob @email not this
+				should collect hierarchy of tags and insert *bold* test
+				should ignore titles, dates, priorities
+	+1 recuring task all red {04}
+	+2 title %bar%
+	[bob]
+	buy something
+	research foo
+(01/01) +a title
+	!A +b title
+		+3 title
+		+c title
+			+d title
+				+a +b +c +d put cursor on this line and run script
+				collect +\S\+ tags only
+				not this
+				should collect hierarchy of tags and insert
+				should ignore prior lines with no tags
+				should ignore titles, dates, priorities
+	+1 title
+	+2 title
+(08/23) %Above_Due_Today% 
+(10/15) +project # comment or description of project
+	(10/17) +project +tag2 # description 2
+		@office write job 
+		@phone bob
+		read job 
+	(10/20) +project +subproject description 1
+		@email task1 if needed
+		task2
+			{1} aar subtask1
+			{2} foo subtask2
+			{3} doo subtask3
+		task3
+		task4
+(10/20) [12/10] +project summary
+	next thing
+		(10/14) latest action
+		other thing
+		random stuff
+		some job
+			subtask
+(2011/02/13) +next year's task!
+**********************************************************************
++task +unloved
+	assign this a due date
+o 2009-10-14 08:02 test syntax for 'not done' task
+x 2010-08-23 09:56 (10/17) +project +tag2 chase job
