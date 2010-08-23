@@ -150,18 +150,18 @@ if version >= 508 || !exists("did_conf_syntax_inits")
   " Normal 
 
   HiLink todoAssignee       Number
-  HiLink todoBold           Error
+  hi todoBold term=bold cterm=bold gui=bold
   HiLink todoCommand        Special
   HiLink todoComment        Comment
   HiLink todoContext        Statement
   HiLink todoDate           PreProc
   HiLink todoDefer          Type
-  HiLink todoDone           Comment
+  HiLink todoDone           NonText
   HiLink todoEmail          Underlined
   HiLink todoFoldProject    PreProc
   HiLink todoLabel          Todo
   HiLink todoNever          Comment
-  HiLink todoPriority       Error
+  hi todoPriority term=bold cterm=bold gui=bold
   HiLink todoProject        Identifier
   HiLink todoQuery          Constant
   HiLink todoRACI           PreProc
@@ -171,10 +171,10 @@ if version >= 508 || !exists("did_conf_syntax_inits")
   HiLink todoUline          CursorLine
   HiLink todoVerb           Type
 
-  syn region todotxtPriA matchgroup=todotxtPriA start=/^\s*(A) / end=/$/ contains=ALL
-  syn region todotxtPriB matchgroup=todotxtPriB start=/^\s*(B) / end=/$/ contains=ALL
-  syn region todotxtPriC matchgroup=todotxtPriC start=/^\s*(C) / end=/$/ contains=ALL
-  syn region todotxtPriD matchgroup=todotxtPriD start=/^\s*(D) / end=/$/ contains=ALL
+  syn region todotxtPriA matchgroup=todotxtPriA start=/^\s*\((A)\)\|[*!]\+A / end=/$/ contains=ALL
+  syn region todotxtPriB matchgroup=todotxtPriB start=/^\s*\((B)\)\|[*!]\+B / end=/$/ contains=ALL
+  syn region todotxtPriC matchgroup=todotxtPriC start=/^\s*\((C)\)\|[*!]\+C / end=/$/ contains=ALL
+  syn region todotxtPriD matchgroup=todotxtPriD start=/^\s*\((D)\)\|[*!]\+D / end=/$/ contains=ALL
   hi todotxtPriA ctermfg=DarkYellow guifg=DarkYellow
   hi todotxtPriB ctermfg=Green guifg=Green
   hi todotxtPriC ctermfg=Blue guifg=Blue
