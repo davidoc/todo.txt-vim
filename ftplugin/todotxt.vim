@@ -114,6 +114,17 @@ endfunction
 
 command! -nargs=? TodoDone :call <SID>TodoDone(<f-args>)
 
+" TodoCancelled: Cancel a task according to todo.txt syntax
+"
+" Adds "x @cancelled " to the start of a task to show completion
+" Adding an argument gives number of days in the past when done
+"
+function! s:TodoCancelled(...)
+    execute "normal I" . "x @cancelled "
+endfunction
+
+command! -nargs=? TodoCancelled :call <SID>TodoCancelled(<f-args>)
+
 " Add a tag
 map  [t   $:CopyTag<CR>
 vmap [t   $:CopyTag<CR>
@@ -121,6 +132,9 @@ vmap [t   $:CopyTag<CR>
 " Mark a task as done
 map  [d   :TodoDone<CR>
 vmap [d   :TodoDone<CR>
+
+map  [x   :TodoCancelled<CR>
+vmap [x   :TodoCancelled<CR>
 
 map  [j   $:CopyTag<CR>:CopyDate<CR>:TodoDone<CR>
 vmap [j   $:CopyTag<CR>:CopyDate<CR>::TodoDone<CR>
