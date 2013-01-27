@@ -1,12 +1,17 @@
+todo.txt-vim
+=============
+
 Some files to make editing todo.txt files in Vim more enjoyable.
 
 Author
-=======
+-------
+
 Original author Graham Davies, 2009.
+
 New syntax, plugin packaging and upload to github by David O'Callaghan, 2010.
 
 Install
-========
+--------
 
 If you have the `make` and `rsync` commands available, run:
 
